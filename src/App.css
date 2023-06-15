@@ -1,0 +1,162 @@
+
+.navBar {
+  height: 3.5em;
+  border-radius: 28px;
+  background: #f8f7f7;
+box-shadow:  35px 35px 70px #d3d2d2;
+  margin: 2em;
+  display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.service{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logoContainer{
+  /* background: #e0e0e0; */
+  
+padding: 0.5rem;
+}
+.logo{
+  height: 2.5rem;
+}
+.hero-text-container{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+}
+.hero{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.main-text{
+  font-size: calc(1.365rem + 1.38vw);
+  font-weight: 700;
+}
+
+.type {
+  display:inline-block;
+  vertical-align: bottom;
+}
+
+.type > span {
+  display:grid;
+  overflow: hidden;
+  height:1.2em;
+}
+
+.type span span {
+  width:0%;
+  max-width:max-content;
+  overflow: hidden;
+  height:inherit;
+  word-break:break-all;
+  animation:
+    c 0.5s infinite steps(1),  
+    t 2s linear infinite alternate,
+    m 12s steps(3) infinite;
+}
+.type span span:before {
+  content:" ";
+  display:inline-block;
+}
+
+@keyframes t{
+  90%,100% {width:100%}
+}
+
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 red  }
+}
+
+@keyframes m{
+  100% {transform:translateY(-300%)}
+}
+
+.main-text{
+  font-family: "Optima", sans-serif !important;
+  font-weight: 700;
+  color: #343f52;
+  word-spacing: 0.1rem;
+  letter-spacing: -.01rem;
+  text-align: center;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  transition: all 0.02s;
+  font-weight: bold;
+  color: rgb(37, 37, 37);
+  z-index: 0;
+  box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  background: rgb(193, 228, 248);
+  color: rgb(33, 0, 85);
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hoverEffect div {
+  background: rgb(222,0,75);
+  background: linear-gradient(90deg, rgba(222,0,75,1) 0%, rgba(191,70,255,1) 49%, rgba(0,212,255,1) 100%);
+  border-radius: 40rem;
+  width: 10rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.action-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem;
+  width: 70%;
+  align-items: center;
+}
